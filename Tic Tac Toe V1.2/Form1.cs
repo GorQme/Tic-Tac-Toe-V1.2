@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,7 +32,7 @@ namespace Tic_Tac_Toe_V1._2
             }
             b.Enabled = false;
 
-            if((b1.Text == b2.Text && b2.Text == b3.Text && b1.Enabled==false)||
+            if ((b1.Text == b2.Text && b2.Text == b3.Text && b1.Enabled == false) ||
                 ((b4.Text) == b5.Text && b5.Text == b6.Text && b4.Enabled == false) ||
                 ((b7.Text) == b8.Text && b8.Text == b9.Text && b7.Enabled == false) ||
                 ((b1.Text) == b4.Text && b4.Text == b7.Text && b1.Enabled == false) ||
@@ -40,7 +40,7 @@ namespace Tic_Tac_Toe_V1._2
                 ((b3.Text) == b6.Text && b6.Text == b9.Text && b3.Enabled == false) ||
                 ((b1.Text) == b5.Text && b5.Text == b9.Text && b1.Enabled == false) ||
                 ((b3.Text) == b5.Text && b5.Text == b7.Text && b3.Enabled == false))
-        {
+            {
                 if (nr % 2 != 0)
                     MessageBox.Show("X Wins");
                 else
@@ -48,10 +48,17 @@ namespace Tic_Tac_Toe_V1._2
 
                 this.Close();
 
+            }
+            else if (nr == 9)
+            {
+                MessageBox.Show("Draw");
+                this.Close();
+            }
+                
         }
                 
                 
         }
 
     } 
-}
+
